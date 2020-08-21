@@ -63,47 +63,83 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>/publication_types/</loc>
+=======
+    <loc>/author/nelson-bighetti/</loc>
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
+<<<<<<< HEAD
                 href="/it/publication_types/"
+=======
+                href="/it/author/nelson-bighetti/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+<<<<<<< HEAD
                 href="/publication_types/"
+=======
+                href="/author/nelson-bighetti/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>/publication/</loc>
+=======
+    <loc>/publication_types/</loc>
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
+<<<<<<< HEAD
                 href="/it/publication/"
+=======
+                href="/it/publication_types/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+<<<<<<< HEAD
                 href="/publication/"
+=======
+                href="/publication_types/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>/author/rafik-margaryan/</loc>
+=======
+    <loc>/publication/</loc>
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
+<<<<<<< HEAD
                 href="/it/author/rafik-margaryan/"
+=======
+                href="/it/publication/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+<<<<<<< HEAD
                 href="/author/rafik-margaryan/"
+=======
+                href="/publication/"
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
                 />
   </url>
   
@@ -226,4 +262,21 @@
                 />
   </url>
   
+<<<<<<< HEAD
+=======
+  <url>
+    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="/it/author/%E5%90%B3%E6%81%A9%E9%81%94/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/author/%E5%90%B3%E6%81%A9%E9%81%94/"
+                />
+  </url>
+  
+>>>>>>> d4190475d2c60aaafa5b61f5f2056f591130b444
 </urlset>
