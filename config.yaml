@@ -67,10 +67,14 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
-        url: posts
+      - name: Medicine
+        url: medicine
+      - name: AI
+        url: ai
+      - name: Art
+        url: art
       - name: Github
-        url: "https://github.com/"
+        url: "https://github.com/raffdoc"
 
   socialIcons:
     - name: twitter
