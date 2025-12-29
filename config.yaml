@@ -62,7 +62,7 @@ params:
     enabled: true # needs to be explicitly set
     title: Welcome
     subtitle: "Check out my posts below"
-    imageUrl: "<link or path of image for opengraph, twitter-cards>"
+    imageUrl: "images/medical_logo.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
