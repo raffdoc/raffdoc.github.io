@@ -1,42 +1,103 @@
 baseurl: /
 publishDir: docs
 languageCode: en-US
-title: A Hugo website
-theme: hugo-lithium
-ignoreFiles:
-  - \.Rmd$
-  - \.Rmarkdown$
-  - _cache$
-permalinks:
-  post: /:year/:month/:day/:slug/
+title: My Personal Website
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics:
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: My Personal Website
+  description: "A modern personal website"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"]
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Welcome
+    subtitle: "Check out my posts below"
+    imageUrl: "<link or path of image for opengraph, twitter-cards>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Github
+        url: "https://github.com/"
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/"
+
 menu:
   main:
-    - name: About
-      url: /about/
-    - name: GitHub
-      url: https://github.com/rstudio/blogdown
-    - name: Twitter
-      url: https://twitter.com/rstudio
-params:
-  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
-  MathJaxVersion: 2.7.5
-  description: A website built through Hugo and blogdown.
-  favicon: favicon.ico
-  highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
-  highlightjsLang:
-    - r
-    - yaml
-  highlightjsTheme: github
-  highlightjsVersion: 9.12.0
-  logo:
-    alt: Logo
-    height: 50
-    url: logo.png
-    width: 50
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example
+      url: /example.org
+      weight: 30
+
 markup:
-  defaultMarkdownHandler: goldmark
   goldmark:
     renderer:
-      unsafe: yes
+      unsafe: true
   highlight:
-    codeFences: no
+    noClasses: false
