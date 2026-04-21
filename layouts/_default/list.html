@@ -7,21 +7,22 @@
 {{- if and .IsHome site.Params.profileMode.enabled }}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
-{{- $paginator := .Paginate $pages }}
-{{- range $index, $page := $paginator.Pages }}
+{{- $pages = $pages.ByDate.Reverse }}
+{{- $latestPost := index $pages 0 }}
+{{- if $latestPost }}
 <article class="post-entry">
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+      <a href="{{ $latestPost.RelPermalink }}">{{ $latestPost.Title }}</a>
     </h2>
   </header>
-  {{- if (ne ($page.Param "hideSummary") true) }}
+  {{- if (ne ($latestPost.Param "hideSummary") true) }}
   <div class="entry-content">
-    <p>{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+    <p>{{ $latestPost.Summary | plainify | htmlUnescape }}{{ if $latestPost.Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
   <footer class="entry-footer">
-    {{- partial "post_meta.html" $page -}}
+    {{- partial "post_meta.html" $latestPost -}}
   </footer>
 </article>
 {{- end }}
