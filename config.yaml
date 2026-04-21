@@ -69,8 +69,6 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Blog
-        url: post
       - name: Posts
         url: post
       - name: Medicine

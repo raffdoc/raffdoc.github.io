@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.153.0</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 03 Mar 2025 21:48:51 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Week in the Life of a Cardiac Surgeon</title>
+      <link>/post/a-week-in-the-life/</link>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/post/a-week-in-the-life/</guid>
+      <description>Reflections on balancing complex surgeries with data science research and life.</description>
+    </item>
     <item>
       <title>About</title>
       <link>/about/</link>
