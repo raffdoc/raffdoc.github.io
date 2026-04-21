@@ -1,0 +1,88 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- end }}
+
+{{- if and .IsHome site.Params.profileMode.enabled }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $paginator := .Paginate $pages }}
+{{- range $index, $page := $paginator.Pages }}
+<article class="post-entry">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    </h2>
+  </header>
+  {{- if (ne ($page.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+  <footer class="entry-footer">
+    {{- partial "post_meta.html" $page -}}
+  </footer>
+</article>
+{{- end }}
+{{- end }}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- .Content }}
+</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+{{- if .IsHome }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- end }}
+{{- $paginator := .Paginate $pages }}
+
+{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
+{{- if and (not site.Params.profileMode.enabled) .IsHome }}
+{{- range $index, $page := $paginator.Pages }}
+<article class="{{ if and (eq $paginator.PageNumber 1) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">
+      {{- .Title }}
+    </h2>
+  </header>
+  {{- if (ne (.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+  <footer class="entry-footer">
+    {{- partial "post_meta.html" . -}}
+  </footer>
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{- if $paginator.HasPrev }}
+    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Prev</a>
+    {{- end }}
+    {{- if $paginator.HasNext }}
+    <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
+    {{- end }}
+  </nav>
+</footer>
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}
