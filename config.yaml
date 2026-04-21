@@ -43,6 +43,8 @@ params:
   showtoc: false
   tocopen: false
 
+  mainSections: [post]
+
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
@@ -60,13 +62,15 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Welcome
-    subtitle: "Check out my posts below"
+    title: Dr. Rafik Margaryan
+    subtitle: "Pediatric Cardiac Surgeon | Data Scientist | Artist"
     imageUrl: "images/medical_logo.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
+      - name: Blog
+        url: post
       - name: Medicine
         url: medicine
       - name: AI
@@ -86,6 +90,10 @@ params:
 
 menu:
   main:
+    - identifier: blog
+      name: Blog
+      url: /post/
+      weight: 5
     - identifier: categories
       name: categories
       url: /categories/
