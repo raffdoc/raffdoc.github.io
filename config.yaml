@@ -71,6 +71,8 @@ params:
     buttons:
       - name: Blog
         url: post
+      - name: Posts
+        url: post
       - name: Medicine
         url: medicine
       - name: AI
